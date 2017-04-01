@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+#include "Transaction.h"
+#include "screen.h"
+#include "BankDatabase.h"
+
+Transaction::Transaction(int userAccountNumber,Screen &atmScreen,
+	BankDatabase &atmBankDatabase) :accountNumber(userAccountNumber), screen(atmScreen)
+	, bankDatabase(atmBankDatabase)
+{
+
+   
+}
+
+
+
+int Transaction::getAccountNumber() const
+{
+	return accountNumber;
+}
+
+Screen &Transaction::getScreen() const
+{
+	return screen;
+}
+
+BankDatabase &Transaction::getBankDatabase() const
+{
+	return bankDatabase;
+}
